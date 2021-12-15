@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Sua Reserva - CESAR</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="../../vendors/base/vendor.bundle.base.css">
+  <link rel="stylesheet" href="../../css/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="../../images/favicon.png" />
+  <style> 
+  .mapaimg {
+  position: absolute;
+    top: 97px;
+    right: 65px; 
+    width: 425px;
+    height: 590px;
+    
+  }
+  .cancel{
+    color: black;
+    
+  };
+  </style>
+</head>
+  <body>
+    <div class="container-scroller">
+      <!-- partial:partials/_navbar.html -->
+      <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+          <a class="navbar-brand brand-logo" href="home.html"><img src="../../images/logo_cesar.png" alt="logo"/></a>
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-center">
+          <ul class="navbar-nav mr-lg-1">
+            <li>
+                <h4>Olá! Bem-vindo(a) ao sistema de reservas do CESAR!</h4>
+            </li>
+          </ul>
+          <ul class="navbar-nav navbar-nav-right">
+            <li class="nav-item dropdown mr-1">
+              <a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center" id="notificationDropdown" href="#" data-toggle="dropdown">
+                <i class="ti-bell" ></i>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="notificationDropdown">
+                <p class="mb-0 font-weight-normal float-left dropdown-header">Notificações</p>
+                <a class="dropdown-item">
+                  <div class="item-thumbnail">
+                    <div class="item-icon btn-danger">
+                      <i class="ti-info-alt mx-0"></i>
+                    </div>
+                  </div>
+                  <div class="item-content">
+                    <h6 class="font-weight-normal">Check-in próximo</h6>
+                    <p class="font-weight-light small-text mb-0 text-muted">
+                      Próximo check-in em 15 min
+                    </p>
+                  </div>
+                </a>
+                <a class="dropdown-item">
+                  <div class="item-thumbnail">
+                    <div class="item-icon bg-primary">
+                      <i class="ti-light-bulb mx-0"></i>
+                    </div>
+                  </div>
+                  <div class="item-content">
+                    <h6 class="font-weight-normal">Atualização do sistema</h6>
+                    <p class="font-weight-light small-text mb-0 text-muted">
+                      Temos novidades!
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </li>
+          </ul>
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+            <span class="ti-view-list"></span>
+          </button>
+        </div>
+      </nav>
+      <!-- barra lateral  -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../../home.html">
+                <i class="ti-bookmark menu-icon"></i>
+                <span class="menu-title">Área de reservas</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+                <i class="ti-user menu-icon"></i>
+                <span class="menu-title">Minha conta</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="auth">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="../../paginas/mensagem/paginasFuturas.html"> Meus dados </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="../../paginas/mensagem/paginasFuturas.html"> Minhas reservas </a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../paginas/mensagem/paginasFuturas.html">
+                <i class="ti-headphone-alt menu-icon"></i>
+                <span class="menu-title">Fale conosco</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../paginas/mensagem/paginasFuturas.html">
+                <i class="ti-book menu-icon"></i>
+                <span class="menu-title">Como utilizar o sistema</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../index.html">
+                <i class="ti-close menu-icon"></i>
+                <span class="menu-title">Sair</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper">
+        <!-- Formulários reserva-->
+      <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Informe os dados da reserva de <u>estação</u>:</h4>
+            <form class="forms-sample">
+              <div class="form-group">
+                <label for="datacheckin">Data do check-in: </label>
+                <input type="date" class="form-control" id="datacheckin" name="datacheckin" placeholder="dd/mm/aaaa">
+              </div>
+              <div class="form-group">
+                <label for="horacheckin">Turno:</label>
+                <select id="horacheckin" class="custom-select">
+                  <option value="manha">Manhã</option>
+                  <option value="tarde">Tarde</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="horacheckout">Período:</label>
+                <select id="horacheckout" class="custom-select">
+                  <option value="4h">4h</option>
+                  <option value="6h">6h</option>
+                  <option value="8h">8h</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="estacao">Escolher estação</label>
+                <div class="form-inline">
+                  <select id="liestacao" class="custom-select">
+                    <option selected>Lista:</option>
+                    <option value="est1">Estação A1</option>
+                    <option value="est2">Estação A2</option>
+                    <option value="est3">Estação A3</option>
+                    <option value="est4">Estação A4</option>
+                  </select>
+                  <div class="form-inline">
+                      <!-- plugins:js  <button class="btn btn-success btn-sm" type="button">Ver mapa</button> -->
+                  </div>
+                </div>
+              </div>
+              <div class="form-check form-check-flat form-check-primary">
+                <label class="form-check-label">
+                  <input type="checkbox" class="form-check-input" data-on="YES" data-off="NO">
+                  Confirmo que estou devidamente imunizado contra a COVID-19 e seguirei todas as medidas sanitárias estabelecidas para o trabalho presencial.
+                </label>
+              </div>   
+              <button onclick="realizar_Reserva()" class="btn btn-primary mr-2">Realizar reserva</button>
+              <a class="cancel" href="../../home.html">Cancelar</a>
+            </form>
+          </div>
+         
+        </div>
+      </div> <img src="areaTrabalho.jpg"alt="Mapa" class="mapaimg"/>
+ 
+  </body>
+    <!-- plugins:js -->
+    <script src="../../vendors/base/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page-->
+    <script src="../../vendors/chart.js/Chart.min.js"></script>
+    <!-- End plugin js for this page-->
+    <!-- inject:js -->
+    <script src="../../js/off-canvas.js"></script>
+    <script src="../../js/hoverable-collapse.js"></script>
+    <script src="../../js/template.js"></script>
+    <script src="../../js/todolist.js"></script>
+    <script src="reserva_estacao.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page-->
+    <script src="../../js/dashboard.js"></script>
+    <!-- End custom js for this page-->
+</html>

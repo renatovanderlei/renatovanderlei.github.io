@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Sua Reserva - CESAR</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="../../vendors/base/vendor.bundle.base.css">
+  <link rel="stylesheet" href="../../css/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="../../images/favicon.png" />
+</head>
+ 
+  <body>
+    <div class="container-scroller">
+      <!-- partial:partials/_navbar.html -->
+      <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+          <a class="navbar-brand brand-logo" href="home.html"><img src="../../images/logo_cesar.png" alt="logo"/></a>
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-center">
+          <ul class="navbar-nav mr-lg-1">
+            <li>
+                <h4>Olá! Bem-vindo(a) ao sistema de reservas do CESAR!</h4>
+            </li>
+          </ul>
+          <ul class="navbar-nav navbar-nav-right">
+            <li class="nav-item dropdown mr-1">
+              <a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center" id="notificationDropdown" href="#" data-toggle="dropdown">
+                <i class="ti-bell" ></i>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="notificationDropdown">
+                <p class="mb-0 font-weight-normal float-left dropdown-header">Notificações</p>
+                <a class="dropdown-item">
+                  <div class="item-thumbnail">
+                    <div class="item-icon btn-danger">
+                      <i class="ti-info-alt mx-0"></i>
+                    </div>
+                  </div>
+                  <div class="item-content">
+                    <h6 class="font-weight-normal">Check-in próximo</h6>
+                    <p class="font-weight-light small-text mb-0 text-muted">
+                      Próximo check-in em 15 min
+                    </p>
+                  </div>
+                </a>
+                <a class="dropdown-item">
+                  <div class="item-thumbnail">
+                    <div class="item-icon bg-primary">
+                      <i class="ti-light-bulb mx-0"></i>
+                    </div>
+                  </div>
+                  <div class="item-content">
+                    <h6 class="font-weight-normal">Atualização do sistema</h6>
+                    <p class="font-weight-light small-text mb-0 text-muted">
+                      Temos novidades!
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </li>
+          </ul>
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+            <span class="ti-view-list"></span>
+          </button>
+        </div>
+      </nav>
+      <!-- barra lateral  -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../../home.html">
+                <i class="ti-bookmark menu-icon"></i>
+                <span class="menu-title">Área de reservas</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+                <i class="ti-user menu-icon"></i>
+                <span class="menu-title">Minha conta</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="auth">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="../../paginas/mensagem/paginasFuturas.html"> Meus dados </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="../../paginas/mensagem/paginasFuturas.html"> Minhas reservas </a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../paginas/mensagem/paginasFuturas.html">
+                <i class="ti-headphone-alt menu-icon"></i>
+                <span class="menu-title">Fale conosco</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../paginas/mensagem/paginasFuturas.html">
+                <i class="ti-book menu-icon"></i>
+                <span class="menu-title">Como utilizar o sistema</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../index.html">
+                <i class="ti-close menu-icon"></i>
+                <span class="menu-title">Sair</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper">
+        <!-- Formulários reserva-->
+      <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Informe os dados da reserva do <u>equipamento</u>:</h4>
+            <form class="forms-sample">
+              <div class="form-group">
+                <label for="datacheckin">Data do check-in: </label>
+                <input type="date" class="form-control" id="datacheckin" name="datacheckin" placeholder="dd/mm/aaaa">
+              </div>
+              <div class="form-group">
+                <label for="horacheckin">Horário de check-in:</label>
+                <select id="horacheckin" class="custom-select">
+                  <option value="8h">08:00</option>
+                  <option value="9h">09:00</option>
+                  <option value="10h">10:00</option>
+                  <option value="11h">11:00</option>
+                  <option value="12h">12:00</option>
+                  <option value="13h">13:00</option>
+                  <option value="14h">14:00</option>
+                  <option value="15h">15:00</option>
+                  <option value="16h">16:00</option>
+                  <option value="17h">17:00</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="horacheckout">Tempo de uso:</label>
+                <select class="custom-select">
+                  <option value="1h">1 hora</option>
+                  <option value="1h30">1 hora 30min</option>
+                  <option value="2h">2 horas</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="estacao">Escolher estação</label>
+                <div class="form-inline">
+                  <select class="custom-select">
+                    <option selected>Equipamentos:</option>
+                    <option value="est1">Equipamento 1</option>
+                    <option value="est2">Equipamento 2</option>
+                    <option value="est3">Equipamento 3</option>
+                    <option value="est4">Equipamento 4</option>
+                    <option value="est5">Equipamento 5</option>
+                    <option value="est6">Equipamento 6</option>
+                  </select>
+              </div>
+              <div class="form-check form-check-flat form-check-primary">
+                <label class="form-check-label">
+                  <input type="checkbox" class="form-check-input" data-on="YES" data-off="NO">
+                  Confirmo que estou devidamente imunizado contra a COVID-19 e seguirei todas as medidas sanitárias estabelecidas para o trabalho presencial.
+                </label>
+              </div>   
+              <button type="submit" class="btn btn-primary mr-2">Realizar reserva</button>
+              <button class="btn btn-light">Cancelar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+ 
+  </body>
+    <!-- plugins:js -->
+    <script src="../../vendors/base/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page-->
+    <script src="../../vendors/chart.js/Chart.min.js"></script>
+    <!-- End plugin js for this page-->
+    <!-- inject:js -->
+    <script src="../../js/off-canvas.js"></script>
+    <script src="../../js/hoverable-collapse.js"></script>
+    <script src="../../js/template.js"></script>
+    <script src="../../js/todolist.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page-->
+    <script src="../../js/dashboard.js"></script>
+    <!-- End custom js for this page-->
+</html>

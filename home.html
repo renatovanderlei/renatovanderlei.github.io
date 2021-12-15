@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Sua Reserva - CESAR</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="vendors/base/vendor.bundle.base.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="images/favicon.png" />
+</head>
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo" href="home.html"><img src="images/logo_cesar.png" alt="logo"/></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center">
+        <ul class="navbar-nav mr-lg-1">
+          <li>
+              <h4>Olá! Bem-vindo(a) ao sistema de reservas do CESAR!</h4>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item dropdown mr-1">
+            <a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center" id="notificationDropdown" href="#" data-toggle="dropdown">
+              <i class="ti-bell" ></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="notificationDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Notificações</p>
+              <a class="dropdown-item">
+                <div class="item-thumbnail">
+                  <div class="item-icon btn-danger">
+                    <i class="ti-info-alt mx-0"></i>
+                  </div>
+                </div>
+                <div class="item-content">
+                  <h6 class="font-weight-normal">Check-in próximo</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Próximo check-in em 15 min
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item">
+                <div class="item-thumbnail">
+                  <div class="item-icon bg-primary">
+                    <i class="ti-light-bulb mx-0"></i>
+                  </div>
+                </div>
+                <div class="item-content">
+                  <h6 class="font-weight-normal">Atualização do sistema</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Temos novidades!
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="ti-view-list"></span>
+        </button>
+      </div>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="home.html">
+              <i class="ti-bookmark menu-icon"></i>
+              <span class="menu-title">Área de reservas</span>
+            </a>
+          </li>
+		      <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+              <i class="ti-user menu-icon"></i>
+              <span class="menu-title">Minha conta</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="auth">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="paginas/forms/basic_elements.html"> Meus dados </a></li>
+                <li class="nav-item"> <a class="nav-link" href="paginas/mensagem/paginasFuturas.html"> Minhas reservas </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="paginas/mensagem/paginasFuturas.html">
+              <i class= "ti-headphone-alt menu-icon"></i>
+              <span class="menu-title">Fale conosco</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="paginas/mensagem/paginasFuturas.html">
+              <i class="ti-book menu-icon"></i>
+              <span class="menu-title">Como utilizar o sistema</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              <i class="ti-close menu-icon"></i>
+              <span class="menu-title">Sair</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <h2 class="font-weight-bold text-white btn btn-warning btn-lg">Escolha sua reserva:</h2>
+                </div>
+              </div>
+            </div>
+            <!-- Botão Fazer Check-in-->
+              <div class="col-8 grid-margin stretch-card">
+                <div class="card stretch-card">
+                  <div class="card-body">
+                   <h4 class="card-title text-md-center">Fazer check-in   <i class="ti-check-box menu-icon"></i></i></h4>
+                    <p class="card-description text-md-center">
+                      Informe o código do componente reservado:
+                    </p>
+                      <form class="form-inline justify-content-center">
+                          <input type="text" class="form-control form-control-sm mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Código do componente">
+                          <a href="index_checkout.html" class="btn-sm btn-primary mb-2">Check-in</a>
+                      </form>
+                      <p id="demo"></p>
+                  </div>
+                </div>
+              </div>
+          </div>
+        
+          <!-- Linha de botões para páginas de reservas -->
+          <div class="row">
+            <div class="col-md-4 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-title text-md-center">Estação de trabalho <i class="ti-calendar"></i></p>
+                  <div class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
+                    <a class="nav-link" href="paginas/reserva_estacao/reserva_estacao.html">
+                     <h6 class="text-md-center"><b>Clique aqui para reservar uma estação de trabalho</b></h6>
+                    </a>
+                  </div>  
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-title text-md-center">Equipamentos <i class="ti-settings"></i></p>
+                  <div class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
+                    <a class="nav-link" href="paginas/reserva_equipamento/reserva_equipamento.html">
+                      <h6 class="text-md-center"><b>Clique aqui para reservar um equipamento</b></h6>
+                    </a>
+				         </div>  
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-title text-md-center">Laboratórios <i class="ti-ruler-pencil"></i></p>
+                  <div class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
+				             <a class="nav-link" href="paginas/reserva_laboratorio/reserva_laboratorio.html">
+                       <h6 class="text-md-center"><b>Clique aqui para reservar um laboratório</b></h6>
+				            	</a>
+                  </div>  
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!--Minhas reservas -->
+          <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h3 class="card-title text-md-center"><strong>RESERVA RÁPIDA<i class="icon-md ti-bolt"></i></strong></h3>
+                  <div class="table-responsive">
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th>Data:</th>
+                          <th>Turno:</th>
+                          <th>Período:</th>
+                          <th>Estações:</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td id="currentdate">"Data-hoje"</td>
+                          <td id="turnoAgora">"Turno-agora"</td>
+                          <td><select id="periodoRapido" class="custom-select">
+                            <option value="4h">4 horas</option>
+                            <option value="6h">6 horas</option>
+                            <option value="8h">8 horas</option>
+                          </td>
+                          <td><select id="estacaorapido" class="custom-select">
+                            <option selected>Lista:</option>
+                            <option value="est1">A1</option>
+                            <option value="est2">A2</option>
+                            <option value="est3">A3</option>
+                            <option value="est4">A4</option>
+                          </select></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="form-check form-check-flat form-check-primary">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" data-on="YES" data-off="NO">
+                        Confirmo que estou devidamente imunizado contra a COVID-19 e seguirei todas as medidas sanitárias estabelecidas para o trabalho presencial.
+                      </label>
+                    </div>  
+                    <div>
+                      <button onclick="checkin_Rapido()" class="btn btn-primary mr-2">Fazer check-in</button>
+                      <button class="btn btn-light btn-outline-secondary">Limpar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+           <!--Minhas reservas -->
+            <div class="col-md-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-title text-md-center">Próximas reservas:</p>
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Data:</th>
+                          <th>Check-in:</th>
+                          <th>Checkout:</th>
+                          <th>Recurso:</th>
+                          <th>Ação:</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>04/nov/21</td>
+                          <td>08:00</td>
+                          <td>16:00</td>
+                          <td>A1</td>
+                          <td><button class="btn-primary" href=""><i class="ti-check-box menu-icon">
+                          </i><button class="btn-danger" href=""><i class="ti-trash menu-icon"></i></td>
+                        </tr>
+                        <tr>
+                          <td>05/nov/21</td>
+                          <td>10:00</td>
+                          <td>12:00</td>
+                          <td>Lab 3</td>
+                          <td><button class="btn-primary" href=""><i class="ti-check-box menu-icon">
+                          </i><button class="btn-danger" href=""><i class="ti-trash menu-icon"></i></td>
+                        </tr>
+                        <tr>
+                          <tr>
+                            <td>06/nov/21</td>
+                            <td>14:00</td>
+                            <td>15:00</td>
+                            <td>Equip X</td>
+                            <td><button class="btn-primary" href=""><i class="ti-check-box menu-icon">
+                            </i><button class="btn-danger" href=""><i class="ti-trash menu-icon"></i></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        <footer class="footer">
+        </footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- plugins:js -->
+  <script src="vendors/base/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- funcao-checkin rapido -->
+  <script src="index.js"></script>
+  <!-- Plugin js for this page-->
+  <script src="vendors/chart.js/Chart.min.js"></script>
+  <!-- End plugin js for this page-->
+  <!-- inject:js -->
+  <script src="js/off-canvas.js"></script>
+  <script src="js/hoverable-collapse.js"></script>
+  <script src="js/template.js"></script>
+  <script src="js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="js/dashboard.js"></script>
+  <!-- End custom js for this page-->
+</body>
+
+</html>
+
